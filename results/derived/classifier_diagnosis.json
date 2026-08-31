@@ -1,0 +1,25 @@
+{
+  "gap_cause": {
+    "other -> local_subdir": 99,
+    "other -> local_traversal": 32
+  },
+  "gap_examples": {
+    "other -> local_subdir": [
+      ".\\Modules\\s3",
+      ".\\Modules\\vpc",
+      ".\\Modules\\vpc",
+      ".\\Modules\\s3",
+      ".\\Modules\\s3"
+    ],
+    "other -> local_traversal": [
+      "..\\nginx-module",
+      "..\\nginx-module",
+      "..\\nginx-module",
+      "..\\nginx-module",
+      "..\\nginx-module"
+    ]
+  },
+  "cross_file_old": 161618,
+  "cross_file_corrected": 161749,
+  "difference": 131
+}

@@ -1,0 +1,65 @@
+{
+  "experiment": "rq4_cross_file_resolution",
+  "started_utc": "2026-08-24T21:13:32.227998+00:00",
+  "python": "3.13.15",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "os_release": "#1 SMP Thu Apr 30 18:17:14 UTC 2026",
+  "tool_paths": {
+    "checkov": "/usr/local/bin/checkov",
+    "tfsec": "/usr/local/bin/tfsec",
+    "terrascan": "/usr/local/bin/terrascan",
+    "trivy": "/usr/local/bin/trivy"
+  },
+  "tool_versions": {
+    "checkov": "3.3.13",
+    "tfsec": "v1.28.14",
+    "terrascan": "version: v1.19.9",
+    "trivy": "Version: 0.74.0"
+  },
+  "terraform_version": "Terraform v1.10.5",
+  "terraform_init_executed": false,
+  "semantic_validation_pass": false,
+  "hcl_validation": "terraform fmt -check (syntax); provider-level validation only if semantic_validation_pass is true",
+  "provider_schemas_downloaded": false,
+  "invocation": "default directory scan on case root; JSON output; no custom rules",
+  "properties": [
+    "P1_s3_public_acl",
+    "P2_sg_open_ingress"
+  ],
+  "constructs": [
+    {
+      "name": "C1 variable default",
+      "level": "intra-module multi-file"
+    },
+    {
+      "name": "C2 local value",
+      "level": "intra-module multi-file"
+    },
+    {
+      "name": "C3 terraform.tfvars",
+      "level": "intra-module multi-file"
+    },
+    {
+      "name": "C7 override.tf",
+      "level": "intra-module multi-file"
+    },
+    {
+      "name": "C4 module input",
+      "level": "inter-module propagation"
+    },
+    {
+      "name": "C5 module output chaining",
+      "level": "inter-module propagation"
+    },
+    {
+      "name": "C6 nested modules",
+      "level": "inter-module propagation"
+    }
+  ],
+  "excluded_properties": {
+    "P3_encryption": "excluded: count=0 formulation leaves the block in static source, so it is not a clean unencrypted-bucket test"
+  },
+  "finished_utc": "2026-08-24T21:19:09.929347+00:00",
+  "total_tool_runs": 249,
+  "hcl_validation_problems": {}
+}

@@ -1,0 +1,160 @@
+{
+  "tools": [
+    "checkov",
+    "tfsec",
+    "terrascan",
+    "trivy"
+  ],
+  "properties": {
+    "P1_s3_public_acl": [
+      {
+        "level": "intra-module multi-file",
+        "rows": [
+          {
+            "construct": "C1  Variable default (separate file)",
+            "verdicts": [
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED"
+            ]
+          },
+          {
+            "construct": "C2  Local value (separate file)",
+            "verdicts": [
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED"
+            ]
+          },
+          {
+            "construct": "C3  terraform.tfvars",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C7  override.tf (last-wins merge)",
+            "verdicts": [
+              "NOT",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          }
+        ]
+      },
+      {
+        "level": "inter-module propagation",
+        "rows": [
+          {
+            "construct": "C4  Module input (root -> module)",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "RESOLVED",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C5  Module output chaining",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C6  Nested modules (two levels)",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          }
+        ]
+      }
+    ],
+    "P2_sg_open_ingress": [
+      {
+        "level": "intra-module multi-file",
+        "rows": [
+          {
+            "construct": "C1  Variable default (separate file)",
+            "verdicts": [
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED"
+            ]
+          },
+          {
+            "construct": "C2  Local value (separate file)",
+            "verdicts": [
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED",
+              "RESOLVED"
+            ]
+          },
+          {
+            "construct": "C3  terraform.tfvars",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C7  override.tf (last-wins merge)",
+            "verdicts": [
+              "RESOLVED",
+              "RESOLVED",
+              "NOT",
+              "RESOLVED"
+            ]
+          }
+        ]
+      },
+      {
+        "level": "inter-module propagation",
+        "rows": [
+          {
+            "construct": "C4  Module input (root -> module)",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "RESOLVED",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C5  Module output chaining",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          },
+          {
+            "construct": "C6  Nested modules (two levels)",
+            "verdicts": [
+              "RESOLVED",
+              "NOT",
+              "NOT",
+              "NOT"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

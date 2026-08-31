@@ -1,0 +1,61 @@
+{
+  "RQ1": {
+    "repos_total": 62406,
+    "repos_any_dependency": 30377,
+    "repos_with_cf": 21665
+  },
+  "RQ2": {
+    "vcs_remote": 37171,
+    "local_traversal": 101819,
+    "local_subdir": 59930,
+    "registry": 64001,
+    "other": 920,
+    "http_remote": 76,
+    "cloud_bucket": 435
+  },
+  "RQ3": {
+    "repos_hit": 9035,
+    "repos_cf": 21665,
+    "reached_types_per_module": {
+      "aws_iam_policy_document": 13851,
+      "aws_security_group_rule": 12897,
+      "aws_iam_role_policy_attachment": 12485,
+      "aws_iam_role": 11648,
+      "aws_security_group": 11276,
+      "aws_iam_policy": 7946,
+      "aws_s3_bucket": 4160,
+      "azurerm_storage_account": 1674,
+      "aws_kms_key": 1373,
+      "aws_db_instance": 1143
+    },
+    "domain_rollup_per_module": {
+      "IAM": 45930,
+      "Network": 24173,
+      "Storage": 6977,
+      "Encryption": 1373
+    },
+    "unique_targeted_modules": 19809,
+    "counting_unit": "per unique targeted module (the reported unit); per-edge counts are also in the file for comparison",
+    "reached_types_per_edge": {
+      "aws_iam_policy": 25618,
+      "aws_iam_role": 22713,
+      "aws_iam_role_policy_attachment": 34766,
+      "aws_security_group": 18741,
+      "aws_security_group_rule": 35346,
+      "aws_iam_policy_document": 40641,
+      "aws_s3_bucket": 6815,
+      "aws_kms_key": 2347,
+      "azurerm_storage_account": 2344,
+      "aws_db_instance": 1746
+    }
+  },
+  "resolver": {
+    "cross_file_total": 161749,
+    "resolved": 154494,
+    "unresolved": 7255,
+    "unresolved_reasons": {
+      "target_dir_not_indexed": 6153,
+      "parent_traversal_escapes_repo": 1102
+    }
+  }
+}
