@@ -1,0 +1,14 @@
+{
+ "cmd": [
+  "terraform",
+  "fmt",
+  "-check",
+  "-recursive",
+  "/content/rq4/cases/P1_s3_public_acl__checkov__C6__control"
+ ],
+ "returncode": 0,
+ "stdout": "",
+ "stderr": "",
+ "duration_s": 0.03,
+ "timeout": false
+}

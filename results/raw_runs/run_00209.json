@@ -1,0 +1,17 @@
+{
+ "cmd": [
+  "terrascan",
+  "scan",
+  "-i",
+  "terraform",
+  "-d",
+  "/content/rq4/cases/P2_sg_open_ingress__terrascan__C7__treatment",
+  "-o",
+  "json"
+ ],
+ "returncode": 4,
+ "stdout": "{\n  \"results\": {\n    \"scan_errors\": [\n      {\n        \"iac_type\": \"terraform\",\n        \"directory\": \"/content/rq4/cases/P2_sg_open_ingress__terrascan__C7__treatment\",\n        \"errMsg\": \"failed type assertion for hcl.Body in *hclConfigs.Resource. error: expected hcl.Body type is *hclsyntax.Body, but got configs.mergeBody\"\n      }\n    ],\n    \"violations\": null,\n    \"skipped_violations\": null,\n    \"scan_summary\": {\n      \"file/folder\": \"/content/rq4/cases/P2_sg_open_ingress__terrascan__C7__treatment\",\n      \"iac_type\": \"terraform\",\n      \"scanned_at\": \"2026-08-24 21:18:37.558287915 +0000 UTC\",\n      \"policies_validated\": 785,\n      \"violated_policies\": 0,\n      \"low\": 0,\n      \"medium\": 0,\n      \"high\": 0\n    }\n  }\n}\n",
+ "stderr": "",
+ "duration_s": 1.47,
+ "timeout": false
+}

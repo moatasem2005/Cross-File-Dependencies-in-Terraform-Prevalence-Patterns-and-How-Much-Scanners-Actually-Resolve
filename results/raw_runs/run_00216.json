@@ -1,0 +1,17 @@
+{
+ "cmd": [
+  "terrascan",
+  "scan",
+  "-i",
+  "terraform",
+  "-d",
+  "/content/rq4/cases/P2_sg_open_ingress__terrascan__C5__control",
+  "-o",
+  "json"
+ ],
+ "returncode": 4,
+ "stdout": "{\n  \"results\": {\n    \"scan_errors\": [\n      {\n        \"iac_type\": \"terraform\",\n        \"directory\": \"/content/rq4/cases/P2_sg_open_ingress__terrascan__C5__control/modules\",\n        \"errMsg\": \"directory '/content/rq4/cases/P2_sg_open_ingress__terrascan__C5__control/modules' has no terraform config files\"\n      }\n    ],\n    \"violations\": null,\n    \"skipped_violations\": null,\n    \"scan_summary\": {\n      \"file/folder\": \"/content/rq4/cases/P2_sg_open_ingress__terrascan__C5__control\",\n      \"iac_type\": \"terraform\",\n      \"scanned_at\": \"2026-08-24 21:18:42.423264818 +0000 UTC\",\n      \"policies_validated\": 137,\n      \"violated_policies\": 0,\n      \"low\": 0,\n      \"medium\": 0,\n      \"high\": 0\n    }\n  }\n}\n",
+ "stderr": "2026/08/24 21:18:40 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions\n",
+ "duration_s": 1.59,
+ "timeout": false
+}

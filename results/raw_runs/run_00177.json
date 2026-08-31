@@ -1,0 +1,15 @@
+{
+ "cmd": [
+  "tfsec",
+  "/content/rq4/cases/P2_sg_open_ingress__tfsec__C3__treatment",
+  "-f",
+  "json",
+  "--no-colour",
+  "--soft-fail"
+ ],
+ "returncode": 0,
+ "stdout": "{\n\t\"results\": [\n\t\t{\n\t\t\t\"rule_id\": \"AVD-AWS-0099\",\n\t\t\t\"long_id\": \"aws-ec2-add-description-to-security-group\",\n\t\t\t\"rule_description\": \"Missing description for security group.\",\n\t\t\t\"rule_provider\": \"aws\",\n\t\t\t\"rule_service\": \"ec2\",\n\t\t\t\"impact\": \"Descriptions provide context for the firewall rule reasons\",\n\t\t\t\"resolution\": \"Add descriptions for all security groups\",\n\t\t\t\"links\": [\n\t\t\t\t\"https://aquasecurity.github.io/tfsec/v1.28.14/checks/aws/ec2/add-description-to-security-group/\",\n\t\t\t\t\"https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group\",\n\t\t\t\t\"https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule\"\n\t\t\t],\n\t\t\t\"description\": \"Security group explicitly uses the default description.\",\n\t\t\t\"severity\": \"LOW\",\n\t\t\t\"warning\": false,\n\t\t\t\"status\": 0,\n\t\t\t\"resource\": \"aws_security_group.b\",\n\t\t\t\"location\": {\n\t\t\t\t\"filename\": \"/content/rq4/cases/P2_sg_open_ingress__tfsec__C3__treatment/main.tf\",\n\t\t\t\t\"start_line\": 1,\n\t\t\t\t\"end_line\": 9\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"rule_id\": \"AVD-AWS-0124\",\n\t\t\t\"long_id\": \"aws-ec2-add-description-to-security-group-rule\",\n\t\t\t\"rule_description\": \"Missing description for security group rule.\",\n\t\t\t\"rule_provider\": \"aws\",\n\t\t\t\"rule_service\": \"ec2\",\n\t\t\t\"impact\": \"Descriptions provide context for the firewall rule reasons\",\n\t\t\t\"resolution\": \"Add descriptions for all security groups rules\",\n\t\t\t\"links\": [\n\t\t\t\t\"https://aquasecurity.github.io/tfsec/v1.28.14/checks/aws/ec2/add-description-to-security-group-rule/\",\n\t\t\t\t\"https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group\",\n\t\t\t\t\"https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule\"\n\t\t\t],\n\t\t\t\"description\": \"Security group rule does not have a description.\",\n\t\t\t\"severity\": \"LOW\",\n\t\t\t\"warning\": false,\n\t\t\t\"status\": 0,\n\t\t\t\"resource\": \"aws_security_group.b\",\n\t\t\t\"location\": {\n\t\t\t\t\"filename\": \"/content/rq4/cases/P2_sg_open_ingress__tfsec__C3__treatment/main.tf\",\n\t\t\t\t\"start_line\": 3,\n\t\t\t\t\"end_line\": 8\n\t\t\t}\n\t\t}\n\t]\n}\n",
+ "stderr": "\n======================================================\ntfsec is joining the Trivy family\n\ntfsec will continue to remain available \nfor the time being, although our engineering \nattention will be directed at Trivy going forward.\n\nYou can read more here: \nhttps://github.com/aquasecurity/tfsec/discussions/1994\n======================================================\nWARNING: A tfvars file was found but not automatically used. Did you mean to specify the --tfvars-file flag?\n",
+ "duration_s": 0.91,
+ "timeout": false
+}

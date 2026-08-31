@@ -1,0 +1,17 @@
+{
+ "cmd": [
+  "terrascan",
+  "scan",
+  "-i",
+  "terraform",
+  "-d",
+  "/content/rq4/cases/P1_s3_public_acl__inline_insecure",
+  "-o",
+  "json"
+ ],
+ "returncode": 3,
+ "stdout": "{\n  \"results\": {\n    \"violations\": [\n      {\n        \"rule_name\": \"s3Versioning\",\n        \"description\": \"Enabling S3 versioning will enable easy recovery from both unintended user actions, like deletes and overwrites\",\n        \"rule_id\": \"AC_AWS_0214\",\n        \"severity\": \"HIGH\",\n        \"category\": \"Resilience\",\n        \"resource_name\": \"b\",\n        \"resource_type\": \"aws_s3_bucket\",\n        \"module_name\": \"root\",\n        \"file\": \"main.tf\",\n        \"plan_root\": \"./\",\n        \"line\": 1\n      },\n      {\n        \"rule_name\": \"allUsersReadAccess\",\n        \"description\": \"Misconfigured S3 buckets can leak private information to the entire internet or allow unauthorized data tampering / deletion\",\n        \"rule_id\": \"AC_AWS_0210\",\n        \"severity\": \"HIGH\",\n        \"category\": \"Identity and Access Management\",\n        \"resource_name\": \"b\",\n        \"resource_type\": \"aws_s3_bucket_acl\",\n        \"module_name\": \"root\",\n        \"file\": \"main.tf\",\n        \"plan_root\": \"./\",\n        \"line\": 5\n      }\n    ],\n    \"skipped_violations\": null,\n    \"scan_summary\": {\n      \"file/folder\": \"/content/rq4/cases/P1_s3_public_acl__inline_insecure\",\n      \"iac_type\": \"terraform\",\n      \"scanned_at\": \"2026-08-24 21:13:56.528907278 +0000 UTC\",\n      \"policies_validated\": 10,\n      \"violated_policies\": 2,\n      \"low\": 0,\n      \"medium\": 0,\n      \"high\": 2\n    }\n  }\n}\n",
+ "stderr": "2026/08/24 21:13:55 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions\n",
+ "duration_s": 5.32,
+ "timeout": false
+}

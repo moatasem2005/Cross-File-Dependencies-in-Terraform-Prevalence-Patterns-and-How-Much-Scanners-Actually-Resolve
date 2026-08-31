@@ -1,0 +1,17 @@
+{
+ "cmd": [
+  "terrascan",
+  "scan",
+  "-i",
+  "terraform",
+  "-d",
+  "/content/rq4/cases/P2_sg_open_ingress__terrascan__C3__control",
+  "-o",
+  "json"
+ ],
+ "returncode": 3,
+ "stdout": "{\n  \"results\": {\n    \"violations\": [\n      {\n        \"rule_name\": \"networkPort22ExposedToprivate\",\n        \"description\": \"Ensure Security Groups Unrestricted Specific Ports SSH (TCP,22) is not exposed to private hosts more than 32\",\n        \"rule_id\": \"AC_AWS_0320\",\n        \"severity\": \"LOW\",\n        \"category\": \"Infrastructure Security\",\n        \"resource_name\": \"b\",\n        \"resource_type\": \"aws_security_group\",\n        \"module_name\": \"root\",\n        \"file\": \"main.tf\",\n        \"plan_root\": \"./\",\n        \"line\": 1\n      }\n    ],\n    \"skipped_violations\": null,\n    \"scan_summary\": {\n      \"file/folder\": \"/content/rq4/cases/P2_sg_open_ingress__terrascan__C3__control\",\n      \"iac_type\": \"terraform\",\n      \"scanned_at\": \"2026-08-24 21:18:32.216832008 +0000 UTC\",\n      \"policies_validated\": 137,\n      \"violated_policies\": 1,\n      \"low\": 1,\n      \"medium\": 0,\n      \"high\": 0\n    }\n  }\n}\n",
+ "stderr": "2026/08/24 21:18:30 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions\n",
+ "duration_s": 1.53,
+ "timeout": false
+}

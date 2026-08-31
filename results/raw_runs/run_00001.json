@@ -1,0 +1,11 @@
+{
+ "cmd": [
+  "checkov",
+  "--version"
+ ],
+ "returncode": 0,
+ "stdout": "3.3.13\n",
+ "stderr": "",
+ "duration_s": 3.82,
+ "timeout": false
+}

@@ -1,0 +1,17 @@
+{
+ "cmd": [
+  "terrascan",
+  "scan",
+  "-i",
+  "terraform",
+  "-d",
+  "/content/rq4/cases/P1_s3_public_acl__terrascan__C7__control",
+  "-o",
+  "json"
+ ],
+ "returncode": 5,
+ "stdout": "{\n  \"results\": {\n    \"scan_errors\": [\n      {\n        \"iac_type\": \"terraform\",\n        \"directory\": \"/content/rq4/cases/P1_s3_public_acl__terrascan__C7__control\",\n        \"errMsg\": \"failed type assertion for hcl.Body in *hclConfigs.Resource. error: expected hcl.Body type is *hclsyntax.Body, but got configs.mergeBody\"\n      }\n    ],\n    \"violations\": [\n      {\n        \"rule_name\": \"s3Versioning\",\n        \"description\": \"Enabling S3 versioning will enable easy recovery from both unintended user actions, like deletes and overwrites\",\n        \"rule_id\": \"AC_AWS_0214\",\n        \"severity\": \"HIGH\",\n        \"category\": \"Resilience\",\n        \"resource_name\": \"b\",\n        \"resource_type\": \"aws_s3_bucket\",\n        \"module_name\": \"root\",\n        \"file\": \"main.tf\",\n        \"plan_root\": \"./\",\n        \"line\": 1\n      }\n    ],\n    \"skipped_violations\": null,\n    \"scan_summary\": {\n      \"file/folder\": \"/content/rq4/cases/P1_s3_public_acl__terrascan__C7__control\",\n      \"iac_type\": \"terraform\",\n      \"scanned_at\": \"2026-08-24 21:15:52.121699178 +0000 UTC\",\n      \"policies_validated\": 10,\n      \"violated_policies\": 1,\n      \"low\": 0,\n      \"medium\": 0,\n      \"high\": 1\n    }\n  }\n}\n",
+ "stderr": "2026/08/24 21:15:50 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions\n",
+ "duration_s": 1.54,
+ "timeout": false
+}

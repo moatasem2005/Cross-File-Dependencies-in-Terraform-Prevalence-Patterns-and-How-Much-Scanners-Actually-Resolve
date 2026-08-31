@@ -1,0 +1,14 @@
+{
+ "cmd": [
+  "terraform",
+  "fmt",
+  "-check",
+  "-recursive",
+  "/content/rq4/cases/P2_sg_open_ingress__checkov__C4__control"
+ ],
+ "returncode": 0,
+ "stdout": "",
+ "stderr": "",
+ "duration_s": 0.03,
+ "timeout": false
+}
