@@ -1,0 +1,7 @@
+# Exact versions used for the reported RQ4 results (see results/rq4_manifest.json).
+checkov==3.3.13
+# Non-Python scanners are pinned in the Dockerfile:
+#   tfsec     v1.28.14
+#   terrascan 1.19.9
+#   trivy     0.74.0
+#   terraform 1.10.5   (syntax validation only)
